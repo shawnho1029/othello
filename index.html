@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11XXXXX - HW10 Othello Dark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Othello 黑白棋</h1>
+            
+            <div class="scoreboard-container">
+                <div class="score-card player-card">
+                    <div class="player-info">
+                        <span class="indicator black-piece-icon"></span> 玩家 (黑)
+                    </div>
+                    <div class="score-display" id="score-black">2</div>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="score-card computer-card">
+                     <div class="player-info">
+                        <span class="indicator white-piece-icon"></span> 電腦 (白)
+                    </div>
+                    <div class="score-display" id="score-white">2</div>
+                </div>
+            </div>
+
+            <div class="status-bar" id="status-msg">遊戲準備就緒，輪到玩家 (黑棋) 下棋</div>
+            
+            <div class="controls-area">
+                <div class="control-group">
+                    <label for="difficulty">AI 強度：</label>
+                    <select id="difficulty">
+                        <option value="basic">基本 (隨機)</option>
+                        <option value="advanced" selected>進階 (策略)</option>
+                    </select>
+                </div>
+                <button id="restart-btn" onclick="initGame()">重新開始局</button>
+            </div>
+        </header>
+
+        <section class="board-wrapper">
+            <div id="board" class="board">
+                </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
